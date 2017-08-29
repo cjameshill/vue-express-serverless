@@ -1,0 +1,26 @@
+{
+  "name": "vue-express-serverless",
+  "version": "0.0.1",
+  "description": "A base point for starting Vue + Expresss running on Serverless with Lambda and Api Gateway",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjameshill/vue-express-serverless.git"
+  },
+  "keywords": [
+    "serverless",
+    "vue",
+    "express",
+    "node",
+    "lambda"
+  ],
+  "author": "Christopher James Hill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cjameshill/vue-express-serverless/issues"
+  },
+  "homepage": "https://github.com/cjameshill/vue-express-serverless#readme"
+}
