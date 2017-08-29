@@ -37,6 +37,7 @@ provider:
   environment:
     NODE_ENV: production
     SERVERLESS: true
+    CDN: 'https://d1mecfk3si22ar.cloudfront.net/'
 
 # you can add packaging information here
 #package:
