@@ -8,7 +8,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const isServerless = process.env.SERVERLESS
 
-const CDN = process.env.CDN
+const CDN = 'https://d1mecfk3si22ar.cloudfront.net/'
 
 module.exports = {
   devtool: isProd
@@ -16,7 +16,7 @@ module.exports = {
     : '#cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: isServerless ? CDN : '/dist',
+    publicPath: isProd ? CDN : '/dist',
     filename: '[name].[chunkhash].js'
   },
   resolve: {
@@ -46,13 +46,13 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: isProd
           ? ExtractTextPlugin.extract({
-              use: 'css-loader?minimize',
+              use: 'sass-loader?minimize',
               fallback: 'vue-style-loader'
             })
-          : ['vue-style-loader', 'css-loader']
+          : ['vue-style-loader', 'sass-loader']
       }
     ]
   },

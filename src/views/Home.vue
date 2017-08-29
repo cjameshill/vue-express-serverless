@@ -1,22 +1,10 @@
-<template>
-	
-	<div class="container">
-		<h1>{{ title }}</h1>
-	</div>
-
+<template lang="pug">
+.container
+	h1.title.is-1 Home
 </template>
 
 <script>
-	
 	export default {
-		data() {
-			return {
-				title: 'Home'
-			}
-		},
-
-		mounted() {
-			console.log('Home component loaded');
-		}
+		
 	}
 </script>

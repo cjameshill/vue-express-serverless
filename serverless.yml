@@ -23,8 +23,8 @@ provider:
   memorySize: 128
   timeout: 15
 # you can overwrite defaults here
- stage: dev
- region: us-east-1
+  stage: dev
+  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
   iamRoleStatements:
@@ -39,16 +39,11 @@ provider:
     SERVERLESS: true
     CDN: 'https://d1mecfk3si22ar.cloudfront.net/'
 
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+plugins:
+  - serverless-plugin-warmup
 
 functions:
+  webapp:
     warmup: true
     handler: lambda.handler
     events:

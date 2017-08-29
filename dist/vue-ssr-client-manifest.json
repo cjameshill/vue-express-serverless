@@ -1,117 +1,134 @@
 {
-  "publicPath": "/dist",
+  "publicPath": "https://d1mecfk3si22ar.cloudfront.net/",
   "all": [
-    "0.a2cdeb8eea3ebc2e40ce.js",
-    "app.24e2ba82bcb275029d8b.js",
-    "vendor.238cfbdc76e6c87bb1e0.js",
-    "manifest.d8c85028cc92c806167b.js",
-    "common.24e2ba82bcb275029d8b.css"
+    "0.89259ab69ef620125669.js",
+    "1.739bb8debbf8ddbe13d6.js",
+    "app.f136e52e753dec2fb0b1.js",
+    "vendor.7e77a990aab592e8b244.js",
+    "manifest.b177aa409d52fef95669.js",
+    "common.f136e52e753dec2fb0b1.css"
   ],
   "initial": [
-    "manifest.d8c85028cc92c806167b.js",
-    "vendor.238cfbdc76e6c87bb1e0.js",
-    "app.24e2ba82bcb275029d8b.js"
+    "manifest.b177aa409d52fef95669.js",
+    "vendor.7e77a990aab592e8b244.js",
+    "app.f136e52e753dec2fb0b1.js"
   ],
   "async": [
-    "0.a2cdeb8eea3ebc2e40ce.js"
+    "0.89259ab69ef620125669.js",
+    "1.739bb8debbf8ddbe13d6.js"
   ],
   "modules": {
     "19475234": [
-      2
+      3
     ],
     "83887dda": [
-      2
+      3
     ],
     "8f5c43b8": [
-      1,
-      4
+      2,
+      5
     ],
     "0fa30134": [
-      2
+      3
     ],
     "de2c6902": [
-      2
+      3
     ],
     "29de117e": [
-      2
+      3
     ],
     "636f9763": [
-      1,
-      4
+      2,
+      5
     ],
     "6ac14f5d": [
-      1,
-      4
+      2,
+      5
     ],
-    "49c2fb42": [
-      1,
-      4
+    "4c3b93d2": [
+      2,
+      5
     ],
     "70bd6eee": [
-      2
+      3
     ],
-    "2bc9c6b3": [
-      1,
-      4
+    "47aacc72": [
+      2,
+      5
     ],
     "3828f780": [
-      1,
-      4
+      2,
+      5
     ],
     "433c4cb8": [
-      2
+      3
     ],
     "1665e8b5": [
-      1,
-      4
+      2,
+      5
     ],
     "426fc0e8": [
-      1,
-      4
+      2,
+      5
     ],
     "2db3e10a": [
-      1,
-      4
+      2,
+      5
     ],
     "0eeb1f5e": [
-      1,
-      4
+      2,
+      5
     ],
     "00177a88": [
-      2
+      3
     ],
     "bac254c0": [
-      2
+      3
     ],
     "7325ff61": [
-      1,
-      4
+      2,
+      5
     ],
     "3c0add50": [
-      1,
-      4
+      2,
+      5
     ],
     "4e124104": [
-      1,
-      4
+      2,
+      5
     ],
     "1c9888b8": [
-      1,
-      4
-    ],
-    "4514aed4": [
-      0
+      2,
+      5
     ],
     "d9a2cda0": [
-      2
+      3
     ],
     "d2b219c8": [
-      2
+      3
     ],
-    "1e340cf7": [
+    "4514aed4": [
+      1
+    ],
+    "352988c4": [
       0
     ],
-    "39dccc9e": [
+    "1e340cf7": [
+      1
+    ],
+    "8ec299dc": [
+      1
+    ],
+    "7fe9f856": [
+      0
+    ],
+    "723003f5": [
+      0
+    ],
+    "7ff5ef01": [
+      0
+    ],
+    "47811a74": [
       0
     ]
   }

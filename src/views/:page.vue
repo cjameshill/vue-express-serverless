@@ -1,8 +1,11 @@
-<template>
+<template lang="pug">
 	
-	<div class="container">
-		<h1>{{ title }}</h1>
-	</div>
+.container
+	h1.title.is-1 {{page}}
+	.field
+		.control
+			input.input.is-primary(v-model='test')
+	h1.title.is-3 {{test}}
 
 </template>
 
@@ -11,7 +14,12 @@
 	export default {
 		data() {
 			return {
-				title: 'Home'
+				test: 'Test Input'
+			}
+		},
+		computed: {
+			page() {
+				return this.$route.params.page
 			}
 		},
 
@@ -20,3 +28,10 @@
 		}
 	}
 </script>
+
+<style lang="stylus">
+
+h1
+	text-transform capitalize
+
+</style>
