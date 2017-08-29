@@ -66,11 +66,8 @@ const serve = (path, cache) => express.static(resolve(path), {
 })
 
 app.use(compression({ threshold: 0 }))
-app.use(favicon('./public/logo-48.png'))
 app.use('/dist', serve('./dist', true))
 app.use('/public', serve('./public', true))
-app.use('/manifest.json', serve('./manifest.json', true))
-app.use('/service-worker.js', serve('./dist/service-worker.js'))
 
 // 1-second microcache.
 // https://www.nginx.com/blog/benefits-of-microcaching-nginx/
@@ -132,10 +129,6 @@ function render (req, res) {
     }
   })
 }
-
-app.get('/new', isProd ? render : (req, res) => {
-  readyPromise.then(() => render(req, res))
-})
 
 app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))

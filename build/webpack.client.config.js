@@ -9,11 +9,6 @@ const config = merge(base, {
   entry: {
     app: './src/entry-client.js'
   },
-  resolve: {
-    alias: {
-      'create-api': './create-api-client.js'
-    }
-  },
   plugins: [
     // strip dev-only code in Vue source
     new webpack.DefinePlugin({
@@ -42,35 +37,5 @@ const config = merge(base, {
   ]
 })
 
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-    // auto generate service worker
-    new SWPrecachePlugin({
-      cacheId: 'vue-hn',
-      filename: 'service-worker.js',
-      minify: true,
-      dontCacheBustUrlsMatching: /./,
-      staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
-      runtimeCaching: [
-        {
-          urlPattern: '/',
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /\/(top|new|show|ask|jobs)/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: '/item/:id',
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: '/user/:id',
-          handler: 'networkFirst'
-        }
-      ]
-    })
-  )
-}
 
 module.exports = config

@@ -6,13 +6,17 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 
+const isServerless = process.env.SERVERLESS
+
+const CDN = process.env.CDN
+
 module.exports = {
   devtool: isProd
     ? false
     : '#cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: 'https://d1mecfk3si22ar.cloudfront.net/',
+    publicPath: isServerless ? CDN : '/dist',
     filename: '[name].[chunkhash].js'
   },
   resolve: {
