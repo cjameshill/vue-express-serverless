@@ -28,6 +28,7 @@ function createRenderer (bundle, options) {
   // https://github.com/vuejs/vue/blob/dev/packages/vue-server-renderer/README.md#why-use-bundlerenderer
   return createBundleRenderer(bundle, Object.assign(options, {
     template,
+    inject: false,
     // for component caching
     cache: LRU({
       max: 1000,
@@ -131,7 +132,9 @@ function render (req, res) {
 }
 
 app.get('*', isProd ? render : (req, res) => {
-  readyPromise.then(() => render(req, res))
+  readyPromise.then(() => { 
+    return render(req, res) 
+  })
 })
 
 const port = process.env.PORT || 8080

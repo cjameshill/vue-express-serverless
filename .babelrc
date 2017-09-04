@@ -1,8 +1,15 @@
 {
   "presets": [
-    ["env", { "modules": false }]
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ]
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "syntax-dynamic-import",
+    "transform-es2015-destructuring",
+    "transform-object-rest-spread"
   ]
 }

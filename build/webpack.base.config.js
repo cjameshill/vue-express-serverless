@@ -16,7 +16,7 @@ module.exports = {
     : '#cheap-module-source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: isProd ? CDN : '/dist',
+    publicPath: isServerless ? CDN : '/dist/',
     filename: '[name].[chunkhash].js'
   },
   resolve: {

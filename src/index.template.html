@@ -11,6 +11,9 @@
     <link rel="shortcut icon" sizes="48x48" href="/public/logo-48.png">
     <meta name="theme-color" content="#f60">
     <link rel="manifest" href="/manifest.json">
+
+    {{{ renderResourceHints() }}}
+    {{{ renderStyles() }}}
     <style>
       #skip a {  position:absolute;  left:-10000px;  top:auto;  width:1px;  height:1px;  overflow:hidden;  }
       #skip a:focus {  position:static;  width:auto;  height:auto;  }
@@ -19,5 +22,8 @@
   <body>
   <div id="skip"><a href="#app">skip to content</a></div>
   <!--vue-ssr-outlet-->
+    {{{ renderApolloState() }}}
+    {{{ renderState() }}}
+    {{{ renderScripts() }}}
   </body>
 </html>
